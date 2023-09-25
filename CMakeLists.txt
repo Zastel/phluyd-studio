@@ -9,9 +9,13 @@ project ("phluyd-studio")
 add_executable (phluyd-studio 
 	# Source files
     "src/main.cpp"
+    "physics/src/verlet_solver.cpp"
 
 	#Header files
-    "include/main.hpp")
+    "include/main.hpp"
+    "physics/include/vec2d.hpp"
+    "physics/include/moving_object.hpp"
+    "physics/include/verlet_solver.hpp")
 
 if (CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(TARGET_ARCHITECTURE x64)
